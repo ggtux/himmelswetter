@@ -1,0 +1,32 @@
+#Dieser Code erstellt eine Flask-Anwendung und definiert eine Route für die Startseite ("/"), auf der das Webinterface angezeigt wird. Die Funktion index() ruft die Daten aus der RRD-Tool-Datenbank ab und erstellt mit rrdtool.graph() einen Diagrammplot. Das gerenderte Diagramm wird dann an die index.html-Vorlage übergeben und im Webinterface angezeigt.
+
+#Erstellen Sie eine HTML-Vorlage (index.html), um das Diagramm im Webinterface darzustellen. Hier ist ein einfaches Beispiel für die Vorlage:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Weather Data</h1>
+    <canvas id="chart"></canvas>
+    <script>
+        var graphData = {{ graph | safe }};
+        var ctx = document.getElementById('chart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: graphData
+        });
+    </script>
+</body>
+</html>
+
+Dieses HTML-Dokument enthält ein Canvas-Element, in dem das Diagramm angezeigt wird. Die JavaScript-Bibliothek Chart.js wird verwendet, um das Diagramm zu erstellen. Der graph-Wert aus der 
+Flask-Anwendung wird als JSON-Daten in das Skript eingebettet und vom Chart.js verwendet, um das Diagramm zu zeichnen.
+
+Sie können die Vorlage und das HTML nach Ihren Bedürfnissen anpassen, um das Webinterface entsprechend zu gestalten.
+
+Bitte beachten Sie, dass dies ein grundlegendes Beispiel ist und Sie weitere Anpassungen und Funktionen hinzufügen können, je nach Ihren Anforderungen.
+
+Falls Sie weitere Fragen haben oder zusätzliche Unterstützung benötigen, stehe ich Ihnen gerne zur Verfügung!
