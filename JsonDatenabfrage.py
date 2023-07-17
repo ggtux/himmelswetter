@@ -27,43 +27,43 @@ response = requests.get(complete_url)
 #json method of response object
 # convert json format data into python format data 
 observations = response.json()
-
 # data from weatherradio
 wr_url="http://192.168.178.74"
 response = requests.get(wr_url)
 weather=response.json()
 
-# Name der CSV-Datei
-dateiname = "/home/geo/WetterDB/wetter_now.csv"
+#Variablendefinition
+i=0 # Index for Messwerte
+Messwerte=[]
 
-# CSV-Datei zum Schreiben öffnen
-with open(dateiname, mode='w', newline='') as datei:
-		schreiber = csv.writer(datei)
+# Werte in Liste Messwerte schreiben
 		
   	# Beobachtungsdaten ausgeben und schreiben
 		for obs in observations['observations']:
 				for key, value in obs.items():
 					if key != 'metric':
-         					locals()[key] = value              
-            	#schreiber.writerow([key,value])					
+						Messwerte.insert(i,value)
+						i=i+1
+            	
 		for obs in observations['observations']:
 			metric = obs['metric']
 			for key, value in metric.items():
-				locals()[key] = value   
-				#print(locals().items())
-    			#schreiber.writerow([key,value])     
-		
+					Messwerte.insert(i,value)
+					i=i+1
+    		
 		# Wetterdaten schreiben
 		for sensor, data in weather['weather'].items():
 				if 'RG11 Rain Sensor' in sensor:
 					for key, value in data.items():
-						schreiber.writerow([key,value])	
+						Messwerte.insert(i,value)
+						i=i+1
 				if 'MLX90614' in sensor:
 					for key, value in data.items():
-						schreiber.writerow([key,value])
+						Messwerte.insert(i,value)
+						i=i+1
 				if 'TSL2591' in sensor:
 					for key, value in data.items():
-						schreiber.writerow([key,value])
+						Messwerte.insert(i,value)
+						i=i+1
 			
-print(locals()[1])
 print('Alles fertig')
