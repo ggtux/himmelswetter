@@ -1,0 +1,44 @@
+https://api.weather.com/v2/pws/observations/current?stationId=ILAUCH27&format=json&units=m&apiKey=46cf957af9f541488f957af9f561488e
+
+Ergebnis:
+
+{"observations":[{"stationID":"ILAUCH27","obsTimeUtc":"2020-11-25T17:28:45Z","obsTimeLocal":"2020-11-25 18:28:45","neighborhood":"Lauchhammer","softwareType":"EasyWeatherV1.5.2","country":"DE","solarRadiation":0.0,"lon":13.73,"realtimeFrequency":null,"epoch":1606325325,"lat":51.479,"uv":0.0,"winddir":117,"humidity":90,"qcStatus":1,"imperial":{"temp":32,"heatIndex":32,"dewpt":30,"windChill":32,"windSpeed":1,"windGust":1,"pressure":29.96,"precipRate":0.00,"precipTotal":0.01,"elev":95}}]}
+
+API-Key: 46cf957af9f541488f957af9f561488e
+
+
+oder: 
+
+{
+  "observations": [
+    {
+      "stationID": "ILAUCH27",
+      "obsTimeUtc": "2020-11-25T17:42:37Z",
+      "obsTimeLocal": "2020-11-25 18:42:37",
+      "neighborhood": "Lauchhammer",
+      "softwareType": "EasyWeatherV1.5.2",
+      "country": "DE",
+      "solarRadiation": 0,
+      "lon": 13.73,
+      "realtimeFrequency": null,
+      "epoch": 1606326157,
+      "lat": 51.479,
+      "uv": 0,
+      "winddir": 106,
+      "humidity": 90,
+      "qcStatus": 1,
+      "imperial": {
+        "temp": 33,
+        "heatIndex": 33,
+        "dewpt": 30,
+        "windChill": 33,
+        "windSpeed": 2,
+        "windGust": 3,
+        "pressure": 29.96,
+        "precipRate": 0,
+        "precipTotal": 0.01,
+        "elev": 95
+      }
+    }
+  ]
+}

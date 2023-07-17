@@ -39,15 +39,19 @@ dateiname = "/home/geo/WetterDB/wetter_now.csv"
 # CSV-Datei zum Schreiben öffnen
 with open(dateiname, mode='w', newline='') as datei:
 		schreiber = csv.writer(datei)
-	# Beobachtungsdaten ausgeben und schreiben
+		
+  	# Beobachtungsdaten ausgeben und schreiben
 		for obs in observations['observations']:
 				for key, value in obs.items():
-					if key != 'metric': 
-						schreiber.writerow([key,value])					
+					if key != 'metric':
+         					locals()[key] = value              
+            	#schreiber.writerow([key,value])					
 		for obs in observations['observations']:
 			metric = obs['metric']
 			for key, value in metric.items():
-				schreiber.writerow([key,value])     
+				locals()[key] = value   
+				#print(locals().items())
+    			#schreiber.writerow([key,value])     
 		
 		# Wetterdaten schreiben
 		for sensor, data in weather['weather'].items():
@@ -61,4 +65,5 @@ with open(dateiname, mode='w', newline='') as datei:
 					for key, value in data.items():
 						schreiber.writerow([key,value])
 			
+print(locals()[1])
 print('Alles fertig')

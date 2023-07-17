@@ -1,0 +1,35 @@
+observations: 
+[{'stationID': 'ILAUCH27', 
+'obsTimeUtc': '2023-07-05T10:00:40Z',
+'obsTimeLocal': '2023-07-05 12:00:40', 
+'neighborhood': 'Lauchhammer',
+'softwareType': 'EasyWeatherV1.5.7', 
+'country': 'DE', 
+'solarRadiation': 337.0, 
+'lon': 13.73, 
+'realtimeFrequency': None, 
+'epoch': 1688551240, 
+'lat': 51.479, 
+'uv': 3.0, 
+'winddir': 225, 
+'humidity': 53, 
+'qcStatus': 1, 
+'metric': 
+    {'temp': 25, 
+    'heatIndex': 25, 
+    'dewpt': 15, 
+    'windChill': 25, 
+    'windSpeed': 9, 
+    'windGust': 15, 
+    'pressure': 1006.54, 
+    'precipRate': 0.0, 
+    'precipTotal': 0.0, 
+    'elev': 29}}]
+
+weather: 
+{'RG11 Rain Sensor': {'init': True, 'mode': 'drop detect', 'count': 17385, 'drop freq': 0},
+'BME280': {'init': True, 'Temp': 44.93000031, 'Pres': 1000.525146, 'Hum': 16.1171875}, 
+'DHT': {'init': True, 'Temp': 46.09999847, 'Hum': 16}, 
+'MLX90614': {'init': True, 'T amb': 46.86998749, 'T obj': 32.24999237}, 
+'TSL2591': {'init': True, 'Lux': 21587.9082, 'Visible': 25649, 'IR': 9174, 'Gain': 0, 'Timing': 1}}
+
