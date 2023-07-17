@@ -1,38 +1,38 @@
 stationID,ILAUCH27
-obsTimeUtc,2023-07-16T19:36:00Z
-obsTimeLocal,2023-07-16 21:36:00
+obsTimeUtc,2023-07-16T13:01:52Z
+obsTimeLocal,2023-07-16 15:01:52
 neighborhood,Lauchhammer
 softwareType,EasyWeatherV1.5.7
 country,DE
-solarRadiation,0.0
+solarRadiation,567.4
 lon,13.73
 realtimeFrequency,
-epoch,1689536160
+epoch,1689512512
 lat,51.479
-uv,0.0
-winddir,137
-humidity,69
+uv,5.0
+winddir,247
+humidity,40
 qcStatus,1
-temp,20
-heatIndex,20
+temp,29
+heatIndex,29
 dewpt,14
-windChill,20
-windSpeed,0
-windGust,0
-pressure,1011.14
+windChill,29
+windSpeed,6
+windGust,7
+pressure,1010.13
 precipRate,0.0
 precipTotal,3.0
 elev,29
 init,True
 mode,drop detect
-count,2962
+count,2960
 drop freq,0
 init,True
-T amb,27.9699955
-T obj,18.95000648
+T amb,48.29000092
+T obj,33.64998627
 init,True
-Lux,16.8748188
-Visible,533
-IR,201
-Gain,16
+Lux,8928.601563
+Visible,16233
+IR,7804
+Gain,0
 Timing,1
