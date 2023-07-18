@@ -22,17 +22,15 @@ def index():
 
     return render_template('index.html', graph=graph.decode())
 
-
-
-
+''' Struktur des importierten Datensatze
+0stationID,ILAUCH27		1obsTimeUtc,2023-07-16T13:01:52Z		2timeStamp,2023-07-16 15:01:52	3neighborhood,Lauchhammer
+4softwareType,EasyWeatherV1.5.7	5country,DE	6solarRadiation,567.4	7lon,13.73	8realtimeFrequency,	9epoch,1689512512
+10lat,51.479	11uv,5.0	12winddir,247	13humidity,40	14qcStatus,1	15AmbientTemp,29	16heatIndex,29	17Taupunkt,14	18windChill,29
+19windSpeed,6	20windGust,7	21pressure,1010.13	22precipRate,0.0	23precipTotal,3.0	24elev,29	25init,True	26mode,drop detect
+27dropCount,2960	28dropFreq,0	29init,True	30T_amb,48.29000092	31T_obj,33.64998627	32init,True	33Lux,8928.601563	34Visible,16233	35IR,7804
+36Gain,0	37Timing,1
 '''
-0	stationID,ILAUCH27		1	obsTimeUtc,2023-07-16T13:01:52Z		2timeStamp,2023-07-16 15:01:52	3	neighborhood,Lauchhammer
-4	softwareType,EasyWeatherV1.5.7	5	country,DE	6solarRadiation,567.4	7	lon,13.73	8	realtimeFrequency,	9epoch,1689512512
-10	lat,51.479	11uv,5.0	12winddir,247	13humidity,40	14	qcStatus,1	15AmbientTemp,29	16	heatIndex,29	17Taupunkt,14	18	windChill,29
-19windSpeed,6	20windGust,7	21pressure,1010.13	22precipRate,0.0	23precipTotal,3.0	24	elev,29	25	init,True	26	mode,drop detect
-27dropCount,2960	28dropFreq,0	29	init,True	30T_amb,48.29000092	31T_obj,33.64998627	32	init,True	33Lux,8928.601563	34Visible,16233	35IR,7804
-36	Gain,0	37	Timing,1
-'''
+
 #create rrdtool database with all necessary data fields
 rrdtool.create(
 	"weather_StFP.rrd", # Station Far Point = StFP
@@ -156,7 +154,6 @@ rrdtool.update(
 #RRDtool graf. Darstellung
 app = Flask(__name__)
 @app.route('/')
-
 if __name__ == '__main__':
     app.run()
 
