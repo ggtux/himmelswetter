@@ -39,31 +39,32 @@ Messwerte=[]
 # Werte in Liste Messwerte schreiben
 		
   	# Beobachtungsdaten ausgeben und schreiben
-		for obs in observations['observations']:
-				for key, value in obs.items():
-					if key != 'metric':
-						Messwerte.insert(i,value)
-						i=i+1
+for obs in observations['observations']:
+	for key, value in obs.items():
+		if key != 'metric':
+			Messwerte.insert(i,value)
+			i=i+1
             	
-		for obs in observations['observations']:
-			metric = obs['metric']
-			for key, value in metric.items():
-					Messwerte.insert(i,value)
-					i=i+1
+for obs in observations['observations']:
+	metric = obs['metric']
+	for key, value in metric.items():
+		Messwerte.insert(i,value)
+		i=i+1
     		
 		# Wetterdaten schreiben
-		for sensor, data in weather['weather'].items():
-				if 'RG11 Rain Sensor' in sensor:
-					for key, value in data.items():
-						Messwerte.insert(i,value)
-						i=i+1
-				if 'MLX90614' in sensor:
-					for key, value in data.items():
-						Messwerte.insert(i,value)
-						i=i+1
-				if 'TSL2591' in sensor:
-					for key, value in data.items():
-						Messwerte.insert(i,value)
-						i=i+1
+for sensor, data in weather['weather'].items():
+	if 'RG11 Rain Sensor' in sensor:
+		for key, value in data.items():
+			Messwerte.insert(i,value)
+			i=i+1
+	if 'MLX90614' in sensor:
+		for key, value in data.items():
+			Messwerte.insert(i,value)
+			i=i+1
+	if 'TSL2591' in sensor:
+		for key, value in data.items():
+			Messwerte.insert(i,value)
+			i=i+1
 			
+Messwerte			
 print('Alles fertig')
