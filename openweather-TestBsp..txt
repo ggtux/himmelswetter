@@ -1,0 +1,102 @@
+https://www.caseking.de/pro-gamer-pc-konfigurator-amd-am5-ddr5-sipc-925.html#p=eakJ4#W:eakK4#WueakL4#WveakM4#XveakN4#XZeakO4#Y:eakP4#YZeakQ4#Z?eakR4##@eakS5008eakT500Ueala501xealb502Xealc5038eald503(eale503uealf503wealg503yealh503Veali504'ealj504$ealk504xeall504zealm504Yealn5056ealo505)ealq505yeanA506(
+
+
+app_id =  4f9ffdab37989a944d92a452e4277819
+
+
+https://api.openweathermap.org/data/3.0/onecall?lat=51.48&lon=13.73&appid=4f9ffdab37989a944d92a452e4277819
+
+https://api.openweathermap.org/data/3.0/onecall?lat=51.48&lon=13.73&dt=20231018200000&appid=4f9ffdab37989a944d92a452e4277819
+
+https://api.openweathermap.org/data/3.0/onecall?lat=51.48&lon=13.73&exclude=hourly,daily&dt=20231018200000&units=metric&appid=4f9ffdab37989a944d92a452e4277819
+
+
+import time
+
+# Aktuelle Zeit als Unix-Zeitstempel
+unix_time = int(time.time())
+
+print(unix_time)
+
+
+Die Funktion time.time() gibt die aktuelle Zeit als Anzahl an Sekunden seit dem 01. Januar 1970 zurück (Unix-Zeitstempel). Da der Wert als Gleitkommazahl zurückgegeben wird, nutzen wir int() um den Wert in eine Ganzzahl umzuwandeln.
+
+Wenn du dieses Skript ausführst, solltest du den aktuellen Unix-Zeitstempel in Sekunden als Ganzzahl sehen.
+
+In Python 3, you can convert a date and time to Unix timestamp (Unix time code) using the datetime module. Here's an example of how you can do it:
+
+import datetime
+
+# Create a datetime object with your desired date and time
+date_time_str = '2022-01-01 12:34:56'  # Replace with your desired date and time
+date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S')
+
+# Convert the datetime object to Unix timestamp
+unix_time = date_time_obj.timestamp()
+
+print(int(unix_time))  # Print the Unix timestamp as an integer
+
+
+In this example, you first create a datetime object by parsing a string representation of your desired date and time using strptime(). The format string '%Y-%m-%d %H:%M:%S' specifies the expected format of the input string.
+
+Then, you use the timestamp() method of the datetime object to get the Unix timestamp. The timestamp() method returns a floating-point value representing the number of seconds since the Unix epoch (January 1, 1970, 00:00:00 UTC).
+
+Finally, you can convert the Unix timestamp to an integer using the int() function if needed.
+
+Note: The above example assumes that the input date and time are in the UTC timezone. If your input is in a different timezone, you may need to adjust it accordingly before converting it to a Unix timestamp.
+
+Zeitumwandlung in Powershell: (Now in Unix-TS)
+
+(Get-Date).ToUniversalTime().Subtract((Get-Date "01/01/1970")).TotalSeconds
+
+1697701617,15238   = Donnerstag, 19. Oktober 2023 09:47:03
+
+
+Tageszusammenfassung:
+
+https://api.openweathermap.org/data/3.0/onecall/day_summary?lat=51.48&lon=13.73&date=2023-10-13&units=metric&appid=4f9ffdab37989a944d92a452e4277819
+
+
+hist. Daten pro Zeitstempel abrufen:
+
+https://api.openweathermap.org/data/3.0/onecall/timemachine?lat=51.48&lon=13.731&dt=1697700544&appid=4f9ffdab37989a944d92a452e4277819
+
+Ausgabe:
+
+{
+    "lat": 51.48,
+    "lon": 13.73,
+    "timezone": "Europe/Berlin",
+    "timezone_offset": 7200,
+    "data": [
+        {
+            "dt": 1697700544,
+            "sunrise": 1697693690,
+            "sunset": 1697731506,
+            "temp": 7.18,
+            "feels_like": 6.11,
+            "pressure": 984,
+            "humidity": 95,
+            "dew_point": 6.43,
+            "uvi": 0.01,
+            "clouds": 100,
+            "visibility": 8974,
+            "wind_speed": 1.79,
+            "wind_deg": 125,
+            "wind_gust": 3.58,
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10d"
+                }
+            ],
+            "rain": {
+                "1h": 0.51
+            }
+        }
+    ]
+}
+
+
