@@ -1,38 +1,12 @@
-stationID,ILAUCH27
-obsTimeUtc,2023-07-16T13:01:52Z
-obsTimeLocal,2023-07-16 15:01:52
-neighborhood,Lauchhammer
-softwareType,EasyWeatherV1.5.7
-country,DE
-solarRadiation,567.4
-lon,13.73
-realtimeFrequency,
-epoch,1689512512
-lat,51.479
-uv,5.0
-winddir,247
-humidity,40
-qcStatus,1
-temp,29
-heatIndex,29
-dewpt,14
-windChill,29
-windSpeed,6
-windGust,7
-pressure,1010.13
-precipRate,0.0
-precipTotal,3.0
-elev,29
-init,True
-mode,drop detect
-count,2960
-drop freq,0
-init,True
-T amb,48.29000092
-T obj,33.64998627
-init,True
-Lux,8928.601563
-Visible,16233
-IR,7804
-Gain,0
-Timing,1
+Sonnenaufgang: ,07:43:29
+Wetter: ,overcast clouds
+Temp/C: ,11.05
+Druck/hPa: ,991
+TauPkt/C: ,9.31
+Bewoelkung/%: ,100
+WindV/m/s: ,1.79
+SQM/mag/qobs :,18.5
+Regen in 1h :,None
+NDmenge/mm/qm: ,
+Sonnenuntergang: ,17:54:52
+Tropfen: ,15966
